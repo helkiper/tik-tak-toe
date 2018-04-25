@@ -12,10 +12,10 @@ module.exports = {
             jquery: "jquery/src/jquery"
         }
     },
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery'
-        })
-    ]
+    // plugins: [
+    //     new webpack.ProvidePlugin({
+    //         $: 'jquery',
+    //         jQuery: 'jquery'
+    //     })
+    // ]
 };

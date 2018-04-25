@@ -12,12 +12,17 @@
     // game.handleClick.call(game, event);
 // };
 
+import Game from './Game';
 import $ from 'jquery';
+var game = new Game();
 
 $(function () {
     console.log('game start');
+    game.start();
+
 });
 
 $('#mainCanvas').click(function (event) {
     console.log(event);
+    game.handleClick.call(game, event);
 });
