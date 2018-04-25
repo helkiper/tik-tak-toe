@@ -11,11 +11,5 @@ module.exports = {
         alias: {
             jquery: "jquery/src/jquery"
         }
-    },
-    // plugins: [
-    //     new webpack.ProvidePlugin({
-    //         $: 'jquery',
-    //         jQuery: 'jquery'
-    //     })
-    // ]
+    }
 };

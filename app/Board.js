@@ -31,24 +31,20 @@ class Board {
         this.context.lineTo(this.cellSize * 2, this.size);
         this.context.stroke();
 
-        // if (state && Array.isArray(state)){
         for (let i = 0; i < 3; i++) {
             for (let j = 0; j < 3; j++) {
-                //todo refactor
                 this.context.save();
-                this.context.translate(j * this.cellSize, i * this.cellSize);
+                    this.context.translate(j * this.cellSize, i * this.cellSize);
 
-                // state.getCell(j, i).draw(this);
-                if (state.getCell(j, i) === 'X') {
-                    this.drawCross();
-                }
-                if (state.getCell(j, i) === '0') {
-                    this.drawZero();
-                }
+                    if (state.getCell(j, i) === 'X') {
+                        this.drawCross();
+                    }
+                    if (state.getCell(j, i) === 'O') {
+                        this.drawZero();
+                    }
                 this.context.restore();
             }
         }
-        // }
     };
 
     drawCross()
@@ -76,11 +72,6 @@ class Board {
         this.context.arc(size * 2, size * 2, size, 0, Math.PI * 2, true);
         this.context.stroke();
     };
-
-    getSize()
-    {
-        return this.size;
-    };
-};
+}
 
 export default Board;
